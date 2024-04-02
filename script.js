@@ -49,11 +49,24 @@
 // sortByAge(arr);
 // console.table(arr);
 
-let arr = [1, 2, 3];
+// let arr = [1, 2, 3];
 
-const shuffle = (arr) => {
-  return arr.sort(() => Math.random() - 0.5);
+// const shuffle = (arr) => {
+//   return arr.sort(() => Math.random() - 0.5);
+// };
+
+// shuffle(arr);
+// console.log(arr);
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+
+let arr = [john, pete, mary];
+
+const getAverageAge = (arr) => {
+  const sumOfAges = arr.reduce((acc, user) => acc + user.age, 0);
+  return sumOfAges / arr.length;
 };
 
-shuffle(arr);
-console.log(arr);
+getAverageAge(arr);
