@@ -58,15 +58,33 @@
 // shuffle(arr);
 // console.log(arr);
 
-let john = { name: "John", age: 25 };
-let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 29 };
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 29 };
 
-let arr = [john, pete, mary];
+// let arr = [john, pete, mary];
 
-const getAverageAge = (arr) => {
-  const sumOfAges = arr.reduce((acc, user) => acc + user.age, 0);
-  return sumOfAges / arr.length;
+// const getAverageAge = (arr) => {
+//   const sumOfAges = arr.reduce((acc, user) => acc + user.age, 0);
+//   return sumOfAges / arr.length;
+// };
+
+// getAverageAge(arr);
+
+let strings = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
+];
+
+const uniqueValues = (arr) => {
+  return arr.filter((currValue, index) => arr.indexOf(currValue) === index);
 };
 
-getAverageAge(arr);
+console.log(uniqueValues(strings));
