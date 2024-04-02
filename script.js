@@ -36,15 +36,24 @@
 // console.log(usersMapped[1].id);
 // console.log(usersMapped[1].fullName);
 
-let john = { name: "John", age: 25 };
-let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 28 };
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
 
-let arr = [pete, john, mary];
+// let arr = [pete, john, mary];
 
-const sortByAge = (arr) => {
-  return arr.sort((a, b) => (a.age > b.age ? 1 : -1));
+// const sortByAge = (arr) => {
+//   return arr.sort((a, b) => (a.age > b.age ? 1 : -1));
+// };
+
+// sortByAge(arr);
+// console.table(arr);
+
+let arr = [1, 2, 3];
+
+const shuffle = (arr) => {
+  return arr.sort(() => Math.random() - 0.5);
 };
 
-sortByAge(arr);
-console.table(arr);
+shuffle(arr);
+console.log(arr);
